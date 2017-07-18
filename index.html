@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="icon.png">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Quattrocento" rel="stylesheet">
+  <!--Import Google Icon Font-->
+   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+  <!-- personalized css -->
+  <link rel="stylesheet" type="text/css" href="theme.css">
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SaniSolvr</title>
+</head>
+<body>
+<main>
+  <!-- beginning of main content -->
+  <div class="main-container valign-wrapper">
+    <div class="overlay"></div>
+    <div class="nav valign-wrapper">
+      <h4 class="valign">SANISOLVR</h4>
+      <div class="right-nav valign">
+        <a id="story">OUR STORY</a>
+        <a id="what">THE PRODUCT</a>
+        <a id="contact">CONTACT US</a>
+      </div>
+    </div>
+    <div class="vid-container" style="visibility:hidden">
+      <iframe src="https://www.youtube.com/embed/7l1ZABEoztA?controls=0&disablekb=1&showinfo=0&rel=0&autoplay=1&enablejsapi=1&loop=3" frameborder="0" allowfullscreen="1"></iframe>
+    </div>
+    <div class="center-text valign">
+      <h1>AFFORDABLE SANITATION FOR EVERYONE</h1>
+      <a class="waves-effect waves-light btn btn-more" id="our-story">Our Story
+      </a>
+    </div>
+    <div class="scroll" id="scroll-icon">
+      <span class="text">SCROLL DOWN</span>
+      <span class="icon"><img src="img/arrow2.png"></span>
+    </div>
+  </div> 
+  <div class="about">
+    <div class="text-container">
+      <h2>THE NEED FOR CLEAN LIVING</h2>
+      <p>A lack of plumbing infrastructure has left approximately 70% of India with inadequate access to sanitation methods. Current options occupy too much space, are too expensive, and aren't built for removing waste from the environment.</p>
+    </div>
+  </div>
+  <div class="wrapper row">
+    <div class="desc left col m6">
+      <div class="img toilet"></div>
+      <h4>OUR SOLUTION</h4>
+      <p>We are building a waterless, electricity free toilet solution that is affordable to all communities and can help reduce problems like water pollution and sanitation safety concerns for women.</p>
+    </div>
+      <div class="desc right col m6">
+        <div class="img village"></div>
+        <h4>FOSTERING GROWTH</h4>
+        <p>In creating sanitation, SaniSolvr also provides entrepreneurial opportunities for local people to establish new toilet business and stimulate financial growth for themselves and the local economy.
+        </p>
+    </div>
+  </div>
+</main> 
+<footer class="page-footer">
+   <div class="container">
+     <div class="row">
+       <div class="col l6 s12">
+         <h5 class="white-text">CONTACT US</h5>
+         <p class="grey-text text-lighten-4">sanisolvinc@gmail.com</p>
+       </div>
+       <div class="col l4 offset-l2 s12">
+       </div>
+     </div>
+   </div>
+   <div class="footer-copyright">
+     <div class="container">
+     © 2017 SaniSolvr Inc.
+     {# <a class="grey-text text-lighten-4 right" href="#!">More Links</a> #}
+     </div>
+   </div>
+ </footer>     
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+<script>
+window.onload = function() {
+  setTimeout(showIframe, 1500)
+};
+
+function showIframe() {
+  $(".vid-container").css('visibility','visible'); 
+}
+
+$("#scroll-icon").click(function() {
+  $('html,body').animate({
+       scrollTop: $('.about').offset().top
+  }, 500);
+});
+$("#story").click(function() {
+  $('html,body').animate({
+       scrollTop: $('.about').offset().top
+  }, 500);
+});
+$("#our-story").click(function() {
+  $('html,body').animate({
+       scrollTop: $('.about').offset().top
+  }, 500);
+});
+$("#what").click(function() {
+  $('html,body').animate({
+       scrollTop: $('.wrapper').offset().top
+  }, 500);
+});
+
+$("#contact").click(function() {
+  $('html,body').animate({
+       scrollTop: $('.page-footer').offset().top
+  }, 500);
+});
+
+</script>
+</body>
+</html>
