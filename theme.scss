@@ -1,0 +1,245 @@
+@import 'normalize';
+
+$font-hd: 'Oswald', sans-serif;
+$dark-text: #37474f;
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+p {
+	line-height: 1.8em;
+	font-size: 1em;
+	color: #455a64;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $font-hd;
+	letter-spacing: 1.2px;
+}
+
+nav {
+	.logo {
+		img {
+			width: 180px;
+		}
+	}
+	padding: 0px 15px;
+	background-color: transparent;
+	ul a {
+		color: black;
+		font-family: $font-hd;
+	}
+}
+
+@keyframes bounce {
+	0%   {top:0px;}
+  25%  {top:6px;}
+  50%  {top:12px;}
+  75%  {top:6px;}
+  100% {top:0px;}
+}
+
+.main-container {
+	background: url('img/kid.jpg');
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	overflow: hidden;
+	min-height: 100vh;
+	#bgvid {
+		overflow: hidden;
+		@media only screen and (max-width: 1200px) {
+		  display: none;
+		}
+	}
+	.logo {
+		img {
+			width: 180px;
+			margin: 0 auto;
+		}
+		position: absolute;
+		width: 100%;
+		top: 20px;
+		left: 5%;
+	}
+	.nav {
+		position: absolute;
+		height: 80px;
+		width: 100%;
+		top: 0;
+		left: 0;
+		color: white;
+		padding: 0 20px;
+		z-index: 100;
+		.right-nav {
+			display: inline-block;
+			float: right;
+			position: absolute;
+			right: 20px;
+			@media only screen and (max-width: 600px) {
+			  display: none;
+			}
+			a {
+				color: white;
+				text-decoration: none;
+				margin-left: 20px;
+				z-index: 100;
+				transition: background .175s ease-out, color .175s ease-out;
+				&:hover {
+					color: #36b3a8;
+					text-decoration: none;
+					cursor: pointer;
+				}
+			} 
+		}
+		#story {
+			z-index: 100;
+		}
+		#what {
+			z-index: 100;
+		}
+		#contact {
+			border: 2px solid white;
+	    border-radius: 18px;
+	    padding: 5px 13px;
+	    z-index: 100;
+	    &:hover {
+	    	color: #36b3a8;
+	    	border: 1px solid #36b3a8;
+	    }
+		}
+	}
+}
+
+.vid-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  @media only screen and (max-width: 650px) {
+  	display: none;
+  }
+}
+
+.overlay {
+	background-color: #455a64;
+	opacity: 0.4;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+.scroll {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 10;
+	color: white;
+	display: inline-block;
+	margin: 0 auto;
+	text-align: center;
+	.text {
+		display: block;
+		font-size: 0.8em;
+	}
+	img {
+		width: 25px;
+		animation: bounce 1.5s infinite linear;
+		position: relative;
+	}
+}
+
+.center-text {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 0;
+	padding-left: 5%;
+	padding-top: 15%;
+	padding-right: 40%;
+	z-index: 10;
+	@media only screen and (max-width: 600px) {
+	  padding-top: 30%;
+	  padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+	}
+	h1 {
+		color: white;
+		//text-shadow: 2px 2px 2px #000;
+		letter-spacing: 1.2px;
+		font-size: 4em;
+		font-family: 'Oswald', sans-serif;
+	}
+	.btn-more {
+		background-color: #36b3a8;
+		box-shadow: none;
+		border-radius: 30px;
+		height: 42px;
+		line-height: 42px;
+		width: 180px;
+		&:hover {
+			    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+		}
+	}
+}
+
+.about {
+	color: $dark-text;
+	padding: 10vh 0;
+	text-align: center;
+	.text-container {
+		margin: 0 auto;
+		width: 60%;
+		h2 {
+			font-family: $font-hd;
+			margin: 50px 0;
+		}
+	}
+}
+
+.wrapper {
+	width: 85%;
+	padding-top: 15vh;
+	margin: 0 auto;
+	text-align: center;
+	min-height: 100vh;
+	@media only screen and (max-width: 600px) {
+	  min-height: 120vh;
+	}
+	.desc {
+		margin-bottom: 50px;
+	}
+	.img {
+		height: 45vh;
+		width: 100%;
+		background-size: cover;
+		background-position: center;
+	}
+	.toilet {
+		background-image: url('img/kid.JPG');
+	}
+	.village {
+		background-image: url('img/entrepreneur.JPG');
+	}
+	h4 {
+		margin: 40px auto;
+		color: #3d9991;
+	}
+}
+.page-footer {
+	color: white;
+	background-color: #37474f;
+}
+
+.footer-copyright {
+	background-color: #263238 !important;
+}
